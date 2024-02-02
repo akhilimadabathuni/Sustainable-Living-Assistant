@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Lifestyle Tips</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #009688;
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #tipsContainer {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 1s ease, transform 1s ease;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #009688;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            color: #555;
+            font-size: 18px;
+            font-weight: normal;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        button {
+            background-color: #009688;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #00796b;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Sustainable Lifestyle Tips</h1>
+
+    <!-- Container for Tips -->
+    <div id="tipsContainer">
+        <h2>Here are some tips for a sustainable lifestyle:</h2>
+        <ul id="tipsList">
+            <!-- Tips will be dynamically added here -->
+        </ul>
+        <button onclick="generateTips()">Refresh</button>
+    </div>
+
+    <!-- JavaScript for generating tips and animation -->
+    <script>
+        // Function to fetch tips from the text file
+        async function fetchTips() {
+            try {
+                const response = await fetch('tips.txt'); // Replace with the path to your text file
+                const textData = await response.text();
+                return textData.split('\n').filter(tip => tip.trim() !== '');
+            } catch (error) {
+                console.error('Error fetching tips:', error);
+                return [];
+            }
+        }
+
+        // Function to generate random tips
+        async function generateTips() {
+            const tipsContainer = document.getElementById('tipsContainer');
+            tipsContainer.style.opacity = '0';
+            tipsContainer.style.transform = 'translateY(-20px)';
+
+            const tipsList = document.getElementById('tipsList');
+            tipsList.innerHTML = ""; // Clear existing tips
+
+            // Fetch tips from the text file
+            const tipsData = await fetchTips();
+
+            // Shuffle tips array
+            const shuffledTips = tipsData.sort(() => Math.random() - 0.5);
+
+            // Display 10 to 15 tips
+            const tipsCount = Math.floor(Math.random() * 6) + 10;
+            for (let i = 0; i < tipsCount && i < shuffledTips.length; i++) {
+                const tipItem = document.createElement('li');
+                tipItem.textContent = shuffledTips[i];
+                tipsList.appendChild(tipItem);
+            }
+
+            // Apply fade-in animation
+            tipsContainer.style.opacity = '1';
+            tipsContainer.style.transform = 'translateY(0)';
+        }
+
+        // Initial tips generation on page load
+        generateTips();
+    </script>
+</body>
+</html>

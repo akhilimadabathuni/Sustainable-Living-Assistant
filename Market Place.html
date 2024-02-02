@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eco-Friendly Marketplace</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: left;
+            margin: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            background: linear-gradient(to right, #d6f5d0, #fff); /* Light Green Gradient */
+        }
+
+        h1, h2 {
+            color: #006400; /* Dark Green */
+        }
+
+        p {
+            color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        #redirectButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: linear-gradient(to right, #006400, #00b300); /* Dark Green Gradient */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .featured-products {
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(to right, #f0f8ff, #e0ffe0); /* Light Blue-Green Gradient */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .product-item {
+            text-align: center;
+            background: #fff; /* White Background */
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .eco-websites {
+            display: flex;
+            justify-content: space-between;
+            background: linear-gradient(to right, #fafad2, #fffacd); /* Light Yellow Gradient */
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .eco-website-item {
+            flex: 0 0 30%;
+            background: #fff; /* White Background */
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .eco-website-item a {
+            font-size: 14px;
+            display: block;
+            margin-bottom: 10px;
+            color: #006400;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .eco-website-item a:hover {
+            text-decoration: underline;
+        }
+
+        .tooltip {
+            visibility: hidden;
+            width: 200px;
+            background-color: #006400;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            top: 110%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .eco-website-item a:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Discover and buy eco-friendly products that make a positive impact on the environment.</h1>
+
+    <!-- Featured Products -->
+    <h2>Eco-Friendly Options:</h2>
+    <div class="featured-products">
+        <div class="product-item">
+            <a href="https://en.wikipedia.org/wiki/Environmentally_friendly" target="_blank">
+                <img src="placeholder_image_1.png" style="max-width: 200px; max-height: 200px;">
+                <p>Environmentally Friendly</p>
+                <button>Info</button>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="https://en.wikipedia.org/wiki/Sustainable_development" target="_blank">
+                <img src="placeholder_image_2.png" style="max-width: 200px; max-height: 200px;">
+                <p>Sustainable Development</p>
+                <button>Info</button>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="https://en.wikipedia.org/wiki/Recycling" target="_blank">
+                <img src="placeholder_image_3.jpeg" style="max-width: 200px; max-height: 200px;">
+                <p>Eco-Friendly Product</p>
+                <button>Info</button>
+            </a>
+        </div>
+    </div>
+
+    <!-- Some Eco-Friendly Product Websites -->
+    <h2>Eco-Friendly Websites</h2>
+    <div class="eco-websites">
+        <div class="eco-website-item">
+            <a href="https://kleangreenindia.com/" target="_blank">
+                KleanGreenIndia
+                <span class="tooltip">Your go-to place for eco-friendly cleaning products.</span>
+            </a>
+        </div>
+        <div class="eco-website-item">
+            <a href="https://earthhero.com/" target="_blank">
+                EarthHero
+                <span class="tooltip">Explore a variety of sustainable living options and products.</span>
+            </a>
+        </div>
+        <div class="eco-website-item">
+            <a href="https://greenfeels.in/pages/shop-by-brand" target="_blank">
+                GreenFeels
+                <span class="tooltip">Discover eco-friendly brands and products at GreenFeels.</span>
+            </a>
+        </div>
+    </div>
+    <script>
+        document.getElementById('redirectButton').onclick = function() {
+            // Redirect to your preferred marketplace website
+            window.location.href = "LINK_TO_MARKETPLACE_WEBSITE";
+        };
+    </script>
+</body>
+</html>

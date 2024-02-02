@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLA HomePage</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('background.jpg') center/cover no-repeat;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center ;
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: #FF6347;
+            margin-top: 20px;
+        }
+
+        .section-heading {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 30px;
+            text-decoration: underline; /* Add underline */
+        }
+
+        p.intro-text {
+            text-align: center;
+            font-size: 16px;
+            color: #030e03; /* Change the color here */
+            max-width: 800px;
+            margin: 20px auto;
+            font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;/* Change the font style here */
+            font-style: italic;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #070303;
+            border: none;
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        a:hover {
+            transform: scale(1.1);
+        }
+
+        span {
+            font-weight: bold;
+            margin-top: 10px;
+            display: none;
+        }
+
+        a:hover span {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            width: 200px;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            pointer-events: none;
+        }
+
+        a:hover img {
+            opacity: 1;
+        }
+
+        a p {
+            color: #090404;
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sustainable Living Assistant</h1>
+
+
+    <p class="intro-text">
+        "Our platform aims to address these challenges by providing users with a comprehensive solution to embrace sustainable living. By offering a range of features including a carbon footprint calculator, sustainable lifestyle tips, and a marketplace for eco-friendly products, we empower users to make informed decisions and take meaningful steps towards reducing their environmental impact."
+    </p>
+
+    <div class="button-container">
+        <a href="Carbon Footprint Calculator.html">
+            <img src="carbon foot print.jpg" alt="Calculator Image">
+            <span>Explore Calculator</span>
+            <p>Carbon Footprint Calculator</p>
+        </a>
+        <a href="tips.html">
+            <img src="tips.webp" alt="Eco-friendly Tips Image">
+            <span>Check Tips</span>
+            <p>Eco-friendly Tips</p>
+        </a>
+        <a href="Market Place.html">
+            <img src="market place.jpg" alt="Sustainable Marketplace Image">
+            <span>Visit Marketplace</span>
+            <p>Sustainable Marketplace</p>
+        </a>
+    </div>
+</body>
+</html>
